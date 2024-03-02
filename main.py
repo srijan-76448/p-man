@@ -99,9 +99,13 @@ def update_norms(exclude: list):
 
 
 def show_man():
+    p = ''
     with open(manual_file_path) as f:
-        print(f.readlines())
+        x = f.readlines()
+        for i in x:
+            p += i
 
+    print(p)
     exit()
 
 
