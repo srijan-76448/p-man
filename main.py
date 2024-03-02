@@ -2,7 +2,6 @@
 
 import os, sys, subprocess as sp, json
 from pkg_list_maker import main as pkg_list_maker
-from manual import show_man
 
 
 message_type = {
@@ -27,7 +26,7 @@ important_files = {
     "norms": "norms.json",
     "pkg_list_maker": "pkg_list_maker.py",
     "settings": "settings.json",
-    "manual": "manual.py"
+    "manual": "manual.txt"
 }
 
 for i in list(important_files.values()):
@@ -37,6 +36,7 @@ for i in list(important_files.values()):
 
 norms_file_path = os.path.join(mainDir, important_files["norms"])
 settings_file_path = os.path.join(mainDir, important_files["settings"])
+manual_file_path = os.path.join(mainDir, important_files["manual"])
 
 
 def add_cmd_to_shell():
@@ -98,6 +98,13 @@ def update_norms(exclude: list):
             json.dump(dat, f, indent=4)
 
 
+def show_man():
+    with open(manual_file_path) as f:
+        print(f.readlines())
+
+    exit()
+
+
 def main():
     args = get_pkgs()
     exclude_pkgs = []
@@ -109,8 +116,7 @@ def main():
     app_name = get_app_settings()["name"]
 
     if ("-h" in args) or ("--help" in args) or (args == []):
-        show_man(app_name)
-        exit()
+        show_man()
 
     elif ("-v" in args) or ("--version" in args):
         print(f"{app_name}: Version: \033[1m{get_app_settings()['version']}\033[0m")
