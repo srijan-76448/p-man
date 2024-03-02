@@ -16,7 +16,7 @@ Options:
     -v, --version               output version information and exit
 ```
 
-> **NOTE**
+> **NOTE:**
 > Please edit the `norms.json` file before using.
 
 ## BUG
