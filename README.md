@@ -16,5 +16,8 @@ Options:
     -v, --version               output version information and exit
 ```
 
+> **NOTE**
+> Please edit the `norms.json` file before using.
+
 ## BUG
 This program will not work if `~/.installed-pkgs.json` and `~/.excluded-pkgs.json` files are not prsent in your system.
