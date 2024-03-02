@@ -1,5 +1,7 @@
 # p-man
 
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=srijan-76448.p-man)
+
 ```bash
 Usage:
     pan
