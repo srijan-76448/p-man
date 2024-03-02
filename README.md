@@ -1,5 +1,6 @@
 # p-man
 
+```bash
 Usage:
     pan
     pan <operation> [...]
@@ -10,3 +11,4 @@ Options:
     -e=TEXT-FILE                Exclude the following packages stored in a file
     -h, --help                  Shows the manual page
     -v, --version               output version information and exit
+```
