@@ -2,6 +2,7 @@
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=srijan-76448.p-man)
 
+## Manual
 ```bash
 Usage:
     pan
@@ -14,3 +15,6 @@ Options:
     -h, --help                  Shows the manual page
     -v, --version               output version information and exit
 ```
+
+## BUG
+This program will not work if `~/.installed-pkgs.json` and `~/.excluded-pkgs.json` files are not prsent in your system.
