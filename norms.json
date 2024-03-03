@@ -1,30 +1,9 @@
 {
-    "installed-pkgs-path": "/home/rohit/.installed-pkgs.json",
+    "installed-pkgs-path": "~/.installed-pkgs.json",
     "package-maneger": "yay",
     "install-argument": "-Syy",
     "get-package-argument": "-Q",
     "remove-argument": "-Rns",
     "update-argument": "-Syyu",
-    "exclude": [
-        "binwalk",
-        "aircrack-ng",
-        "sleuthkit",
-        "burpsuite",
-        "dirb",
-        "dirbuster",
-        "gobuster",
-        "dns2tcp-git",
-        "hashcat",
-        "hash-identifier",
-        "hydra",
-        "imgcat",
-        "metasploit",
-        "medusa",
-        "gnu-netcat",
-        "nmap",
-        "pwnat",
-        "ristretto",
-        "udptunnel",
-        "wordlists"
-    ]
+    "exclude": []
 }
