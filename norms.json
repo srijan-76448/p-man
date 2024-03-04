@@ -1,8 +1,10 @@
 {
-    "installed-pkgs-path": "~/.installed-pkgs.json",
-    "package-maneger": "yay",
+    "installed-pkgs-path": "/home/rohit/.installed-pkgs.json",
+    "sudoer": false,
+    "package-maneger": "pacman",
     "install-argument": "-Syy",
     "get-package-argument": "-Q",
+    "unrequird-package-argument": "-Qtdq",
     "remove-argument": "-Rns",
     "update-argument": "-Syyu",
     "exclude": []
