@@ -111,13 +111,26 @@ def show_man():
 
 def main():
     args = get_pkgs()
+    norms = get_norms()
     exclude_pkgs = []
     pkgs = []
-    pkgman = get_norms()["package-maneger"]
-    installarg = get_norms()["install-argument"]
-    removearg = get_norms()["remove-argument"]
-    updatearg = get_norms()["update-argument"]
+
     app_name = get_app_settings()["name"]
+
+    sudoer: bool = norms["sudoer"]
+    pkgman = norms["package-maneger"]
+    installarg = norms["install-argument"]
+    removearg = norms["remove-argument"]
+    updatearg = norms["update-argument"]
+    unreqpkgsarg = norms["unrequird-package-argument"]
+
+    adder        = ""
+    run_command  = ""
+    run_command1 = ""
+    run_command2 = ""
+
+    if sudoer:
+        pkgman = 'sudo ' + pkgman
 
     if ("-h" in args) or ("--help" in args) or (args == []):
         show_man()
@@ -127,7 +140,13 @@ def main():
         exit()
 
     elif ("-u" in args) or ("--update" in args):
-        run_command = f"{pkgman} {updatearg}"
+        run_command1 = f"{pkgman} {removearg} $({pkgman} {unreqpkgsarg})"
+        run_command2 = f"{pkgman} {updatearg}"
+
+        if (run_command1 != "") and (run_command2 != ""):
+            adder = "&&"
+
+        run_command = f"{run_command1} {adder} {run_command2}"
 
     elif ("-rm" in args) or ("--remove" in args):
         run_command = f"{pkgman} {removearg}"
