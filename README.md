@@ -3,7 +3,7 @@
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=srijan-76448.p-man)
 
 ## Manual
-```bash
+```markdown
 Usage:
     pan
     pan <operation> [...]
